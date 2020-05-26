@@ -9,8 +9,9 @@ const tail = function (array) {
   console.log(array);
   if(array === [] || array.length === 1)
     return [];
-  let x = [...array]; 
-  x = x.splice(1, array.length - 1);
+  let x = array.slice(1, array.length - 1);
+  //let x = [...array]; 
+ // x = x.slice(1, array.length - 1);
   console.log(x);
 }
 
