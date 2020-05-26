@@ -1,4 +1,4 @@
-// eqArray FUCTION
+// assertArraysEqual FUCTION
 const assertArraysEqual = (a, b) => {
   let isEqual = true;
   for (let i = 0; i < a.length; i++) {
