@@ -1,4 +1,3 @@
-// assertArraysEqual FUCTION
 // eqArray FUCTION
 const eqArrays = (a, b) => {
   for (let i = 0; i < a.length; i++) {
@@ -7,6 +6,7 @@ const eqArrays = (a, b) => {
   return true;
 };
 
+// assertArraysEqual FUCTION
 const assertArraysEqual = (a, b) => {
   let isEqual = eqArrays(a, b);
 
