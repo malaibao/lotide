@@ -6,13 +6,13 @@ const assertEqual = function (actual, expected) {
 };
 
 const tail = function (array) {
-  console.log(array);
+  //console.log('array is ' +  array);
   if(array === [] || array.length === 1)
-    return [];
-  let x = array.slice(1, array.length - 1);
-  //let x = [...array]; 
- // x = x.slice(1, array.length - 1);
-  console.log(x);
+    console.log([]);
+  else{  
+    let x = array.slice(1, array.length);
+    console.log(x);
+  }
 }
 
 // TEST CODE
