@@ -1,5 +1,5 @@
 // eqArray FUCTION
-const eqArrays = (a, b) => {
+const assertArraysEqual = (a, b) => {
   let isEqual = true;
   for (let i = 0; i < a.length; i++) {
     if (a[i] !== b[i]) {
@@ -20,8 +20,8 @@ const assertEqual = function (actual, expected) {
 };
 
 // TEST CODE
-eqArrays([1, 2, 3], [1, 2, 3]); // => true
-eqArrays([1, 2, 3], [3, 2, 1]); // => false
+assertArraysEqual([1, 2, 3], [1, 2, 3]); // => true
+assertArraysEqual([1, 2, 3], [3, 2, 1]); // => false
 
-eqArrays(["1", "2", "3"], ["1", "2", "3"]); // => true
-eqArrays(["1", "2", "3"], ["1", "2", 3]); // => false
+assertArraysEqual(["1", "2", "3"], ["1", "2", "3"]); // => true
+assertArraysEqual(["1", "2", "3"], ["1", "2", 3]); // => false
