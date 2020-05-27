@@ -38,6 +38,17 @@ const result1 = countOnly(firstNames, {
   Fang: true,
 });
 
+/*
+simpler way
+if (itemsToCount[item]) { 
+  if (results[item]) {
+    results[item] += 1;
+  } else {
+    results[item] = 1;
+  }
+}
+*/
+
 // TEST CODE
 assertEqual(result1["Jason"], 1);
 assertEqual(result1["Karima"], undefined);
