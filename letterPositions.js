@@ -3,8 +3,7 @@ const letterPositions = function (str) {
   const results = {};
   // logic to update results here
   for (let i = 0; i < sentence.length; i++) {
-    if (sentence[i] === " ");
-    else {
+    if (sentence[i] !== " ") {
       let x = sentence[i];
       if (!(sentence[i] in results)) {
         results[x] = [];
