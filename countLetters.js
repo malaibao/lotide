@@ -2,10 +2,12 @@ const countLetters = (input) => {
   let str = input.split(" ").join("").toLowerCase();
   let countObj = {};
   for (let char of str) {
-    if (!(char in countObj))
+    if (!(char in countObj)) {
       // if not exists
       countObj[char] = 1;
-    else countObj[char]++;
+    } else {
+      countObj[char]++;
+    }
   }
   console.log(countObj);
 };
