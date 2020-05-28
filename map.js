@@ -43,6 +43,18 @@ const test3 = map(["hello", "bye", "evening"], (word) =>
 );
 assertArraysEqual(test3, ["olleh", "eyb", "gnineve"]);
 
-// Extra Scenarios
+// Extra Scenarios  //
 // test if return is undefined
+// TEST CASE 4
+const test4 = map(test2, (num) => {
+  num * 2;
+});
+assertArraysEqual(test4, [
+  undefined,
+  undefined,
+  undefined,
+  undefined,
+  undefined,
+]);
+
 // test if callback exists
