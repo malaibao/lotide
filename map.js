@@ -1,7 +1,9 @@
-const map = function (array, callback) {
+// map is for modifying array
+// modifier is a better variable name
+const map = function (array, modifier) {
   const results = [];
   for (let item of array) {
-    results.push(callback(item));
+    results.push(modifier(item));
   }
   return results;
 };
@@ -40,3 +42,7 @@ const test3 = map(["hello", "bye", "evening"], (word) =>
   word.split("").reverse().join("")
 );
 assertArraysEqual(test3, ["olleh", "eyb", "gnineve"]);
+
+// Extra Scenarios
+// test if return is undefined
+// test if callback exists
