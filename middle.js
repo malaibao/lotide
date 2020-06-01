@@ -1,23 +1,4 @@
-// eqArray FUCTION
-const eqArrays = (a, b) => {
-  for (let i = 0; i < a.length; i++) {
-    if (a[i] !== b[i]) return false;
-  }
-  return true;
-};
-
-// assertArraysEqual FUCTION
-const assertArraysEqual = (a, b) => {
-  let isEqual = eqArrays(a, b);
-  console.log(a);
-  console.log(b);
-
-  isEqual
-    ? console.log("✅️✅️✅️ Assertion passed: " + a + " === " + b)
-    : console.log("💥️💥️💥️ Assertion failed: " + a + " !== " + b);
-};
-
-const middle = (input) => {
+const middle = input => {
   let middleElements = [...input];
   if (input.length <= 2) return [];
 
@@ -29,9 +10,4 @@ const middle = (input) => {
   return middleElements;
 };
 
-console.log(middle([1])); // => []
-console.log(middle([1, 2])); // => []
-console.log(middle([1, 2, 3])); // => [2]
-console.log(middle([1, 2, 3, 4, 5])); // => [3]
-console.log(middle([1, 2, 3, 4])); // => [2, 3]
-console.log(middle([1, 2, 3, 4, 5, 6])); // => [3, 4]
+module.exports = middle;
