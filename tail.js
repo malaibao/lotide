@@ -1,9 +1,8 @@
 const tail = function (array) {
   //console.log('array is ' +  array);
-  if (array === [] || array.length === 1) console.log([]);
+  if (array === [] || array.length === 1) return [];
   else {
-    let x = array.slice(1, array.length);
-    console.log(x);
+    return array.slice(1, array.length);
   }
 };
 
