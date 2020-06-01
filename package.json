@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
-  "version": "1.0.0",
-  "description": "",
+  "name": "@maribelleleong/lotide",
+  "version": "1.0.1",
+  "description": "A clone of the Lodash",
   "main": "assertArraysEqual.js",
   "directories": {
     "test": "mocha"
@@ -20,7 +20,7 @@
     "url": "git+https://github.com/malaibao/lotide.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Maribelle Leong",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/malaibao/lotide/issues"
