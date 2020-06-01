@@ -38,6 +38,7 @@ const assertObjectsEqual = function (actual, expected) {
 };
 
 // TEST CASES
+
 // Check same object
 const ab = { a: "1", b: "2" };
 const ba = { b: "2", a: "1" };
@@ -77,3 +78,5 @@ const a1 = { c: "1", d: ["2", 3, 4] };
 const a2 = { c: "1", d: ["2", 3, 4] };
 console.log(eqObjects(a1, a2)); // => true
 assertObjectsEqual(a1, a2);
+
+module.exports = assertObjectsEqual;
