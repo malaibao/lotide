@@ -1,13 +1,3 @@
-// eqArray FUCTION
-/*
-const eqArrays = (a, b) => {
-  for (let i = 0; i < a.length; i++) {
-    if (a[i] !== b[i]) return false;
-  }
-  return true;
-};
-*/
-
 //eqArray FUNCTION with nested array check
 const eqArrays = (a, b) => {
   // Check arrays length
@@ -28,53 +18,4 @@ const eqArrays = (a, b) => {
   return true;
 };
 
-// FUNCTION IMPLEMENTATION
-const assertEqual = function (actual, expected) {
-  if (actual !== expected)
-    console.log(`💥️💥️💥️ Assertion failed: ${actual} !== ${expected}`);
-  else console.log(`✅️✅️✅️ Assertion Passed: ${actual} === ${expected}`);
-};
-
-// TEST CODE
-
-console.log(eqArrays([1, 2, 3], [1, 2, 3])); // => true
-console.log(eqArrays([1, 2, 3], [3, 2, 1])); // => false
-
-console.log(eqArrays(["1", "2", "3"], ["1", "2", "3"])); // => true
-console.log(eqArrays(["1", "2", "3"], ["1", "2", 3])); // => false
-
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => should PASS
-
-// Check nested array
-assertEqual(
-  eqArrays(
-    [1, [55, 44, 77, 88], 2, 3, [9, 8, 7]],
-    [1, [55, 44, 77, 88], 2, 3, [9, 8, 7]]
-  ),
-  true
-);
-
-assertEqual(
-  eqArrays(
-    [1, [55, 44, 77], 2, 3, [9, 8, 7]],
-    [1, [55, 44, 77, 88], 2, 3, [9, 8, 7]]
-  ),
-  false
-);
-assertEqual(
-  eqArrays([1, 2, 3, [9, 8, 7]], [1, [55, 44, 77, 88], 2, 3, [9, 8, 7]]),
-  false
-);
-
-assertEqual(
-  eqArrays(
-    [1, 2, 3, [9, 8, [8, 8], 7]],
-    [1, [55, 44, 77, 88], 2, 3, [9, 8, 7]]
-  ),
-  false
-);
-
-assertEqual(
-  eqArrays([1, 2, 3, [9, 8, [8, 8], 7]], [1, 2, 3, [9, 8, [8, 8], 7]]),
-  true
-);
+module.exports = eqArrays;
