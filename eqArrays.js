@@ -1,3 +1,5 @@
+const assertEqual = require("./assertEqual");
+
 //eqArray FUNCTION with nested array check
 const eqArrays = (a, b) => {
   // Check arrays length
