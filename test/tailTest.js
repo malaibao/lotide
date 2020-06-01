@@ -1,16 +1,23 @@
-const assertEqual = require("../assertEqual");
+const assert = require("chai").assert;
+const expect = require("chai").expect;
 const tail = require("../tail");
 
-// TEST CASE
-// assertEqual(tail([1, 2, 3, 4, 5, 6], 6));
-// assertEqual(tail([1]), []);
-// assertEqual(tail([], []);
+describe("#tail", () => {
+  it("return ['lighthouse', 'Labs'] for ['Yo yo', 'Lighthouse', 'Labs']", () => {
+    expect(tail(["Yo yo", "Lighthouse", "Labs"])).to.deep.equal([
+      "Lighthouse",
+      "Labs",
+    ]);
+  });
 
-// Test Case: Check the original array
-const words = ["Yo Yo", "Lighthouse", "Labs"];
-tail(words); // no need to capture the return value since we are not checking it
-assertEqual(words.length, 3); // original array should still have 3 elements!
+  it("return [] for [1]", () => {
+    expect(tail([1])).to.deep.equal([]);
+  });
 
-tail([1, 2, 3, 4, 5, 6]);
-tail([1]);
-tail([]);
+  it("return [] for []", () => {
+    expect(tail([])).to.deep.equal([]);
+  });
+  it("return [2,3,4,5,6,7,8] for [1,2,3,4,5,6,7,8]", () => {
+    expect(tail([1, 2, 3, 4, 5, 6, 7, 8])).to.deep.equal([2, 3, 4, 5, 6, 7, 8]);
+  });
+});
