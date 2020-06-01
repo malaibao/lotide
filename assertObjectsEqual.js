@@ -1,7 +1,6 @@
-/// eqArray Function
-const eqObjects = function (object1, object2) {
-  //   return assertEqual(object1, object2);
+const eqArrays = require("./eqArrays");
 
+const eqObjects = function (object1, object2) {
   // Check objects' key length
   if (Object.keys(object1).length !== Object.keys(object2).length) {
     return false;
@@ -17,25 +16,6 @@ const eqObjects = function (object1, object2) {
 
     // Check primitive type value
     if (object1[key] !== object2[key]) {
-      return false;
-    }
-  }
-  return true;
-};
-
-// eqArray FUCTION
-const eqArrays = (a, b) => {
-  // Check if both are array
-  if (!Array.isArray(a) || !Array.isArray(b)) {
-    return false;
-  }
-  // Check array length
-  if (a.length !== b.length) {
-    return false;
-  }
-
-  for (let i = 0; i < a.length; i++) {
-    if (a[i] !== b[i]) {
       return false;
     }
   }
