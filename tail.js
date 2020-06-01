@@ -7,6 +7,4 @@ const tail = function (array) {
   }
 };
 
-// TEST CODE
-
 module.exports = tail;
