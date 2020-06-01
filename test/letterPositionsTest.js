@@ -19,5 +19,4 @@ describe("#letterPositions", () => {
       n: [12],
     });
   });
-  //   it("", () => {});
 });
