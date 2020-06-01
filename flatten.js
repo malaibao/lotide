@@ -1,23 +1,6 @@
-// eqArray FUCTION
-const eqArrays = (a, b) => {
-  for (let i = 0; i < a.length; i++) {
-    if (a[i] !== b[i]) return false;
-  }
-  return true;
-};
+const assertArraysEqual = require("./assertArraysEqual");
 
-// assertArraysEqual FUCTION
-const assertArraysEqual = (a, b) => {
-  let isEqual = eqArrays(a, b);
-  console.log(a);
-  console.log(b);
-
-  isEqual
-    ? console.log("✅️✅️✅️ Assertion passed: " + a + " === " + b)
-    : console.log("💥️💥️💥️ Assertion failed: " + a + " !== " + b);
-};
-
-const flatten = (input) => {
+const flatten = input => {
   let newArray = [];
   let i = 0;
   while (i < input.length) {
@@ -33,3 +16,4 @@ const flatten = (input) => {
 const originalArray = [1, 2, [3, 4], 5, [6]];
 const newArray = flatten(originalArray);
 assertArraysEqual(originalArray, newArray);
+assertArraysEqual(newArray, [1, 2, 3, 4, 5, 6]);
