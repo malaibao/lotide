@@ -1,3 +1,5 @@
+//const assertArraysEqual = require("./assertArraysEqual");
+
 const letterPositions = function (str) {
   const sentence = str.toLowerCase();
   const results = {};
@@ -15,24 +17,4 @@ const letterPositions = function (str) {
   return results;
 };
 
-// eqArray FUCTION
-const eqArrays = (a, b) => {
-  for (let i = 0; i < a.length; i++) {
-    if (a[i] !== b[i]) return false;
-  }
-  return true;
-};
-
-// assertArraysEqual FUCTION
-const assertArraysEqual = (a, b) => {
-  let isEqual = eqArrays(a, b);
-  console.log(a);
-  console.log(b);
-
-  isEqual
-    ? console.log("✅️✅️✅️ Assertion passed: " + a + " === " + b)
-    : console.log("💥️💥️💥️ Assertion failed: " + a + " !== " + b);
-};
-
-assertArraysEqual(letterPositions("hello").e, [1]);
-letterPositions("lighthouse in the house");
+module.exports = letterPositions;
